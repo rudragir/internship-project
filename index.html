@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="showCart">
+    <div class="main">
+      <!-- page 1 -->
+      <div class="page1">
+        <!--      NAVIGATION AREA       -->
+        <div class="header-container">
+          <div class="right-section">
+            <div class="top-bar">
+              <div class="logo-area">
+                <a href="">Dealixir</a>
+              </div>
+              <div class="search-bar">
+                <input
+                  type="text"
+                  placeholder="Search for deals, stores, products..."
+                  id="searchInput"
+                />
+                <button>Search</button>
+              </div>
+              <div class="search-filter">
+                <select id="categoryFilter">
+                  <option value="all">All Categories</option>
+                  <option value="electronics">Electronics</option>
+                  <option value="sports">Sports</option>
+                  <option value="fashion">Fashion</option>
+                  <option value="home">Home Decor</option>
+                  <option value="beauty">Beauty</option>
+                </select>
+                <div class="price-filter">
+                  <span>Price:</span>
+                  <input
+                    type="range"
+                    id="priceRange"
+                    min="0"
+                    max="200"
+                    value="200"
+                  />
+                  <span id="priceValue">Up to $200</span>
+                </div>
+              </div>
+
+              <div class="top-icons">
+                <div class="circle_icon , cart_icon" title="Cart">
+                  <img src="img asset/shopping-cart.png" alt="" />
+                  <span>0</span>
+                </div>
+                <div class="circle_icon" title="Likes">
+                  <img src="img asset/love.png" alt="" />
+                </div>
+                <div class="circle_icon" title="Profile">
+                  <img src="img asset/people.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <!--          NAV BAR          -->
+            <div class="nav-bar">
+              <a href="#home">HOME</a>
+              <a href="#categoriesSection">CATEGORIES</a>
+              <a href="#">TOP STORES</a>
+              <a href="#bestOffers">BEST OFFERS</a>
+            </div>
+          </div>
+        </div>
+        <!--         SLIDESHOW           -->
+        <div class="slides">
+          <div class="slideshow">
+            <img src="img asset/bg3.jpg" alt="" />
+            <img src="img asset//bg2.jpg" alt="" />
+            <img src="img asset//porsche-bg.jpg" alt="" />
+            <img src="img asset/bg3.jpg" alt="" />
+            <img src="img asset//bg2.jpg" alt="" />
+          </div>
+          <div class="dots-container"></div>
+        </div>
+        <!--        BEST SELLER        -->
+        <div class="best_sellers-section" id="bestOffers">
+          <div class="label">
+            <span class="bar"></span>
+            <a href="#" class="text">TODAY'S DEALS</a>
+          </div>
+
+          <div class="card_wrapper" id="card_container">
+            <!-- Cards will go here -->
+          </div>
+        </div>
+
+        <!-- Product Details Popup -->
+        <div class="product-popup-overlay" id="productPopup">
+          <div class="product-popup">
+            <button class="close-popup">&times;</button>
+            <div class="popup-content">
+              <div class="popup-image-container">
+                <img id="popupImage" src="" alt="Product Image" />
+              </div>
+              <div class="popup-details">
+                <h2 id="popupTitle"></h2>
+                <p class="price" id="popupPrice"></p>
+                <p class="description" id="popupDescription"></p>
+                <div class="popup-actions">
+                  <button class="add-to-cart-popup">Add to Cart</button>
+                  <a href="#" class="buy-now-popup" target="_blank">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--       CATEGORIES         -->
+        <div class="categories-section" id="categoriesSection">
+          <div class="label">
+            <span class="bar"></span>
+            <a href="#" class="text">SHOP BY CATEGORIES</a>
+          </div>
+
+          <div class="categories-wrapper">
+            <!-- Electronics -->
+            <div class="category-card">
+              <img
+                src="https://m.media-amazon.com/images/I/61evtSm4vDL._SX466_.jpg"
+                alt="Electronics"
+              />
+              <div class="cat-card-body">
+                <h3>Electronics</h3>
+                <p>Mobiles, gadgets & accessories</p>
+                <a href="#" class="explore-btn">Explore</a>
+              </div>
+            </div>
+
+            <!-- Sports -->
+            <div class="category-card">
+              <img src="img asset/nike shoes.jpg" alt="Sports" />
+              <div class="cat-card-body">
+                <h3>Sports</h3>
+                <p>Fitness, shoes & outdoor gear</p>
+                <a href="#" class="explore-btn">Explore</a>
+              </div>
+            </div>
+
+            <!-- Fashion -->
+            <div class="category-card">
+              <img src="img asset/fashion.webp" alt="Fashion" />
+              <div class="cat-card-body">
+                <h3>Fashion</h3>
+                <p>Trendy clothing & accessories</p>
+                <a href="#" class="explore-btn">Explore</a>
+              </div>
+            </div>
+
+            <!-- Home Decor -->
+            <div class="category-card">
+              <img src="img asset/frost house.jpg" alt="Home Decor" />
+              <div class="cat-card-body">
+                <h3>Home Decor</h3>
+                <p>Furniture, lighting & rugs</p>
+                <a href="#" class="explore-btn">Explore</a>
+              </div>
+            </div>
+
+            <!-- Beauty & Personal Care -->
+            <div class="category-card">
+              <img src="img asset/beauty.webp  " alt="Beauty" />
+              <div class="cat-card-body">
+                <h3>Beauty</h3>
+                <p>Skincare, makeup & haircare</p>
+                <a href="#" class="explore-btn">Explore</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--      SHOPPING CART        -->
+    <!-- <div class="cartTab">
+      <h1>SHOPPING CART</h1>
+      <div class="listCart">
+        <div class="listItems">
+          <img src="img asset/beauty.webp" alt="">
+          <div class="name">
+           NAME
+          </div>
+          <div class="totalPrice">
+           $200
+          </div>
+          <div class="quantity">
+            <span class="minus"><</span>
+            <span>1</span>
+            <span class="plus">></span>
+         </div>
+        </div>
+      </div>
+      <div class="btn">
+        <button class="close">CLOSE</button>
+        <button class="checkOut">Check Out</button>
+      </div>
+    </div> -->
+
+    <!-- SHOPPING CART -->
+    <div class="cart-overlay" id="cartOverlay">
+      <div class="cart-sidebar">
+        <div class="cart-header">
+          <h3>Your Cart</h3>
+          <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+          <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotal">$0.00</span>
+          </div>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="main.js"></script>
+  </body>
+</html>
